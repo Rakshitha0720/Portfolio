@@ -784,7 +784,7 @@
 
      @media (max-width: 576px) {
        h1 {
-         font-size: 50px;
+         font-size: 48px;
          letter-spacing: 2px;
        }
 
@@ -825,7 +825,7 @@
 
 
        #typingSub {
-         font-size: 12.8px;
+         font-size: 9.8px;
          font-weight: 400;
          /* margin-top: 15px; */
          /* display: inline-block; */
