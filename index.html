@@ -7,6 +7,11 @@
   <title>Rakshitha S - Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+
   <link href="raks.css" rel="stylesheet">
 
 
@@ -34,14 +39,14 @@
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact-section" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-------------------------About me Section ------------------>
   <section id="about" class="container py-5">
-    <h2>About Me</h2>
+    <h2 class="title-h2">About Me</h2>
     <p>
       I am Rakshitha S, a passionate Electronics and Communication Engineering (ECE) graduate from Bangalore.
       With a strong foundation in full-stack web development, embedded systems, and IoT, I aim to build
@@ -65,7 +70,7 @@
 
   <!------------------------------------Education Section----------->
   <section id="education" class="container py-5">
-    <h2 class="text-center mb-5">Education</h2>
+    <h2 class="title-h2">Education</h2>
     <div class="timeline">
       <div class="timeline-item">
         <h4>Bachelor of Engineering - ECE</h4>
@@ -85,12 +90,14 @@
     </div>
   </section>
 
+
+  <!--------------------------Project Section-------------------->
   <section id="projects" class="container py-5">
-    <h2>Projects</h2>
+    <h2 class="title-h2">Projects</h2>
     <div class="projects-row">
       <div class="project-column">
         <div class="project-card">
-          <div class="project-card-content">
+          <div class="project-card-content" style="background-image: url('images/foot.jpg');">
             <h3>Footstep Power Generation System</h3>
             <a href="https://drive.google.com/file/d/1qmJq2_GiKcNZVy0DVp5nWx8GZMbMVS0R/view?usp=sharing" target="_blank"
               class="btn-see-more">
@@ -111,7 +118,7 @@
       </div>
       <div class="project-column">
         <div class="project-card">
-          <div class="project-card-content">
+          <div class="project-card-content" style="background-image: url('images/object.jpeg');">
             <h3>Object Sorting using Machine Learning</h3>
             <a href="https://drive.google.com/file/d/1VbbK3wmzbTqY3e9WFm4P4rnWDamNn6x4/view?usp=drive_link"
               target="_blank" class="btn-see-more">
@@ -132,9 +139,10 @@
       </div>
       <div class="project-column">
         <div class="project-card">
-          <div class="project-card-content">
+          <div class="project-card-content"
+            style="background-image: url('https://images.unsplash.com/photo-1517292987719-0369a794ec0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80');">
             <h3>Portfolio-Website</h3>
-            <a href="https://rakshitha0720.github.io/Portfolio/" target="_blank" class="btn-see-more">
+            <a href="rak.html" target="_blank" class="btn-see-more">
               See More
             </a>
           </div>
@@ -150,7 +158,7 @@
       </div>
       <div class="project-column">
         <div class="project-card">
-          <div class="project-card-content">
+          <div class="project-card-content" style="background-image: url('images/food.jpg');">
             <h3>Food Delivery App</h3>
             <a href="#" class="btn-see-more">See More</a>
           </div>
@@ -167,7 +175,7 @@
   </section>
   <!----------------------------Skills Section------------------->
   <section id="skills" class="container py-5">
-    <h2 class="text-center mb-5">My Expertise</h2>
+    <h2 class="title-h2">My Expertise</h2>
 
     <div class="row">
       <div class="col-lg-4 mb-4">
@@ -214,7 +222,7 @@
 
   <!------------------------------Experience Section---------->
   <section id="experience" class="container py-5">
-    <h2 class="section-title">My Experience</h2>
+    <h2 class="title-h2">My Experience</h2>
     <div class="row">
       <div class="col-md-12">
         <div class="experience-card">
@@ -258,9 +266,9 @@
   </section>
 
   <!----------------------------------Certificate Section--------------->
-  <section id="certificates" class="py-5">
+  <section id="certificates">
     <div class="container">
-      <h2 class="section-title mb-4">Certificates & Achievements</h2>
+      <h2 class="title-h2 mb-4">Certificates & Achievements</h2>
 
       <!-- Filter Buttons -->
       <div class="filter-buttons mb-4">
@@ -672,12 +680,12 @@
   </div>
 
 
-
+  <!-------------------------Contect Section ------------------>
 
   <section id="contact-section" class="container my-4 my-md-5">
     <div class="row">
       <div class="col-12 col-md-10 col-lg-8 mx-auto">
-        <h2 class="text-center mb-3 mb-md-4">Contact Us</h2>
+        <h2 class="contact-me-h2">Contact Me!</h2>
         <form id="contact-form" class="bg-light p-3 p-md-4 rounded shadow-sm">
           <div class="mb-3">
             <input name="name" type="text" placeholder="Your Name" required class="form-control">
@@ -748,21 +756,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
   <script>
-    // DOM Ready - Main initialization
+   
     document.addEventListener('DOMContentLoaded', function () {
-      // Initialize all functionality
+  
       initNavigation();
       initContactForm();
       initCertificateFilters();
 
-      // First run for dynamic elements
+ 
       updateCurrentSection();
       stickyNavbar();
     });
 
-    // Navigation functionality
+
     function initNavigation() {
-      // Smooth scrolling for anchor links
+
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -775,7 +783,7 @@
               behavior: "smooth"
             });
 
-            // If mobile view, hide menu after clicking (if it's showing)
+
             const navbarMenu = document.getElementById("navbarMenu");
             if (navbarMenu && navbarMenu.classList.contains("show")) {
               navbarMenu.classList.remove("show");
@@ -784,7 +792,7 @@
         });
       });
 
-      // Toggle menu button (for desktop view)
+      
       const toggleButton = document.getElementById("navbarToggle");
       const menu = document.getElementById("navbarMenu");
 
@@ -794,14 +802,12 @@
         });
       }
 
-      // Add scroll event listener for navbar effects
       window.addEventListener('scroll', function () {
         stickyNavbar();
         updateCurrentSection();
       });
     }
 
-    // Make navbar sticky when scrolling
     function stickyNavbar() {
       const navbar = document.getElementById("navbar");
       if (navbar) {
@@ -813,15 +819,12 @@
       }
     }
 
-    // Get current section based on scroll position
     function getCurrentSection() {
       const sections = document.querySelectorAll('section');
       let currentSection = 'Home';
 
-      // Get current scroll position
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-      // Check which section is currently in view
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
@@ -834,14 +837,12 @@
       return currentSection;
     }
 
-    // Update the current section display in mobile navbar
     function updateCurrentSection() {
       const currentSectionElement = document.getElementById('currentSection');
       if (currentSectionElement) {
         currentSectionElement.textContent = getCurrentSection();
       }
 
-      // Update active class in desktop navbar
       const navLinks = document.querySelectorAll('.nav-link');
       const currentSectionLower = getCurrentSection().toLowerCase();
 
@@ -855,10 +856,9 @@
       });
     }
 
-    // Contact form functionality
     function initContactForm() {
       const form = document.getElementById('contact-form');
-      if (!form) return; // Only run if form exists
+      if (!form) return;
 
       const submitBtn = document.getElementById('submit-btn');
       const submitText = document.getElementById('submit-text');
@@ -903,38 +903,29 @@
       });
     }
 
-    // Certificate filtering functionality
     function initCertificateFilters() {
       const filterButtons = document.querySelectorAll('.filter-button');
       const certificateItems = document.querySelectorAll('.certificate-item');
       const seeMoreBtn = document.getElementById('see-more-btn');
 
-      if (!filterButtons.length || !seeMoreBtn) return; // Only run if these elements exist
+      if (!filterButtons.length || !seeMoreBtn) return;
 
-      // See More button functionality
       seeMoreBtn.addEventListener('click', function () {
-        // Show all hidden certificates
         document.querySelectorAll('.hidden-certificate').forEach(certificate => {
           certificate.classList.remove('hidden-certificate');
         });
 
-        // Hide the See More button after clicking
         seeMoreBtn.style.display = 'none';
       });
 
-      // Filter button functionality
       filterButtons.forEach(button => {
         button.addEventListener('click', function () {
-          // Remove active class from all buttons
           filterButtons.forEach(btn => btn.classList.remove('active'));
 
-          // Add active class to clicked button
           this.classList.add('active');
 
-          // Get filter value
           const filterValue = this.getAttribute('data-filter');
 
-          // Filter certificates
           certificateItems.forEach(item => {
             if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
               item.style.display = 'block';
@@ -943,7 +934,6 @@
             }
           });
 
-          // Show See More button only if there are hidden certificates that match the current filter
           let hasHiddenMatchingCertificates = false;
 
           if (filterValue === 'all') {
