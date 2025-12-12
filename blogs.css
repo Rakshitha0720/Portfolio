@@ -1,0 +1,209 @@
+/* ========================================
+   BLOG PAGE SPECIFIC STYLES
+   ======================================== */
+
+/* Hero Section */
+.blog-hero {
+  background: linear-gradient(135deg, #003366 0%, #004c99 100%);
+  text-align: center;
+  padding: 5rem 1.5rem;
+  color: white;
+  margin-top: 0;
+}
+
+.blog-title {
+  font-size: 4rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.blog-subtitle {
+  font-size: 1.4rem;
+  opacity: 0.95;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #003366;
+  margin-bottom: 3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #0073e6, #00c6ff);
+  border-radius: 2px;
+}
+
+/* Blog Cards */
+.blog-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.blog-img {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+.blog-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+/* Content */
+.blog-content {
+  padding: 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-title {
+  font-size: 1.4rem;
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.blog-description {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Button */
+.blog-btn {
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid transparent;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.blog-btn:hover {
+  background-color: white;
+  color: #004080;
+  border-color: #004080;
+  transform: translateX(5px);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .blog-title {
+    font-size: 3rem;
+  }
+
+  .blog-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 4rem 1rem;
+  }
+
+  .blog-title {
+    font-size: 2.5rem;
+  }
+
+  .blog-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-heading {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .blog-img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-hero {
+    padding: 3rem 1rem;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .blog-subtitle {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .blog-card-title {
+    font-size: 1.2rem;
+  }
+
+  .blog-description {
+    font-size: 0.9rem;
+  }
+
+  .blog-img {
+    height: 180px;
+  }
+}
