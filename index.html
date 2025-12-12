@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-
+  <!-- AOS Library for Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link href="raks.css" rel="stylesheet">
 
@@ -97,7 +98,7 @@
     <h2 class="title-h2">Projects</h2>
     <div class="row g-4">
       <div class="col-12 col-md-6 col-lg-6">
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-up" data-aos-duration="600">
           <div class="project-card-content" style="background-image: url('images/foot.jpg');">
             <h3>Footstep Power Generation System</h3>
             <a href="https://drive.google.com/file/d/1qmJq2_GiKcNZVy0DVp5nWx8GZMbMVS0R/view?usp=sharing" target="_blank"
@@ -105,7 +106,7 @@
               See More
             </a>
           </div>
-          <div class="project-card-hover">
+          <div class="project-card-hover" data-aos="fade-in" data-aos-delay="200" data-aos-duration="400">
             <p>
               Developed a prototype for Footstep Power Generation System using
               Arduino Uno and Piezo Sensors
@@ -118,7 +119,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6 col-lg-6">
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
           <div class="project-card-content" style="background-image: url('images/object.jpeg');">
             <h3>Object Sorting using Machine Learning</h3>
             <a href="https://drive.google.com/file/d/1VbbK3wmzbTqY3e9WFm4P4rnWDamNn6x4/view?usp=drive_link"
@@ -126,7 +127,7 @@
               See More
             </a>
           </div>
-          <div class="project-card-hover">
+          <div class="project-card-hover" data-aos="fade-in" data-aos-delay="300" data-aos-duration="400">
             <p>
               Created a working prototype of a System which indigenuously identify
               minute components like Leds, Capacitors and Effectively sort them.
@@ -139,7 +140,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6 col-lg-6">
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
           <div class="project-card-content"
             style="background-image: url('https://images.unsplash.com/photo-1517292987719-0369a794ec0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80');">
             <h3>Portfolio-Website</h3>
@@ -147,7 +148,7 @@
               See More
             </a>
           </div>
-          <div class="project-card-hover">
+          <div class="project-card-hover" data-aos="fade-in" data-aos-delay="400" data-aos-duration="400">
             <p>
               Built a portfolio website with Frontend Technologies like HTML, CSS and BS5
             </p>
@@ -158,12 +159,12 @@
         </div>
       </div>
       <div class="col-12 col-md-6 col-lg-6">
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
           <div class="project-card-content" style="background-image: url('images/food.jpg');">
             <h3>Food Delivery App</h3>
             <a href="#" class="btn-see-more">See More</a>
           </div>
-          <div class="project-card-hover">
+          <div class="project-card-hover" data-aos="fade-in" data-aos-delay="500" data-aos-duration="400">
             <p>
               Implemented JDBC, JEE, MySql to build a fully functional
               Food Delivery App
@@ -736,10 +737,24 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
 
     document.addEventListener('DOMContentLoaded', function () {
+
+      // Initialize AOS
+      AOS.init({
+        once: false, // Animation repeats when scrolling back
+        mirror: true, // Animate out when scrolling past
+        offset: 100, // Offset from trigger point
+        disable: function () {
+          // Only disable AOS on desktop (hover works there)
+          var maxWidth = 992;
+          return window.innerWidth > maxWidth;
+        }
+      });
 
       initNavigation();
       initContactForm();
@@ -928,8 +943,16 @@
         });
       });
     }
+
+    function initProjectCards() {
+      // AOS handles all project card animations automatically
+      // No additional JS logic needed - AOS attributes in HTML control the behavior
+    }
   </script>
 </body>
 
+<!-- AOS library CSS (placed here as per the provided context structure, ideally in <head>) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </html>
+```

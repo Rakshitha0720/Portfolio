@@ -12,7 +12,7 @@
   --text-light: #6c757d;
   --bg-light: #f4f4f4;
   --bg-white: #ffffff;
-  
+
   /* Spacing Scale */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -21,22 +21,22 @@
   --space-xl: 3rem;
   --space-2xl: 4rem;
   --space-3xl: 5rem;
-  
+
   /* Section Padding */
   --section-padding: 4rem 0;
   --section-padding-mobile: 3rem 0;
-  
+
   /* Typography */
   --font-primary: 'Segoe UI', sans-serif;
   --font-serif: Georgia, 'Times New Roman', Times, serif;
   --font-heading: 'Playfair Display', serif;
   --font-cursive: "Parisienne", cursive;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
-  
+
   /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -128,6 +128,7 @@ h1 {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -1028,10 +1029,6 @@ footer {
     min-height: 200px;
   }
 
-  .project-card-hover {
-    display: none;
-  }
-
   .project-card:hover {
     transform: none;
   }
@@ -1092,10 +1089,26 @@ footer {
   }
 }
 
-/* Touch devices */
-@media (hover: none) {
-  .project-card-hover {
+/* Desktop - Normal hover behavior (AOS disabled) */
+@media (min-width: 993px) {
+
+  /* Ensure hover works normally on desktop */
+  .project-card:hover .project-card-hover {
     opacity: 1;
-    background-color: rgba(0, 73, 128, 0.8);
+  }
+}
+
+/* Touch devices and tablets - use AOS to show descriptions on scroll */
+@media (max-width: 992px) {
+
+  /* On mobile/tablet, show descriptions automatically when scrolled into view via AOS */
+  .project-card-hover {
+    pointer-events: none;
+    /* Prevent blocking clicks on mobile */
+  }
+
+  /* AOS will handle showing the hover state */
+  .project-card-hover[data-aos="fade-in"].aos-animate {
+    opacity: 1;
   }
 }
