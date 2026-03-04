@@ -163,10 +163,12 @@ h1 {
   margin: 0;
   padding: var(--space-md) 0;
   justify-content: center;
+  width: 100%;
+  gap: var(--space-md);
 }
 
 .navbar-menu li {
-  margin: 0 var(--space-md);
+  margin: 0;
 }
 
 .navbar-menu li a {
@@ -208,6 +210,35 @@ h1 {
 
 .navbar-toggler {
   display: none;
+}
+
+/* ========================================
+   MOBILE HEADER BUTTONS
+   ======================================== */
+.mobile-header-buttons {
+  display: none;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.mobile-btn {
+  background-color: white;
+  color: var(--primary-color);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  display: inline-block;
+}
+
+.mobile-btn:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
 }
 
 /* ========================================
@@ -911,6 +942,10 @@ footer {
 
   #typingSub {
     font-size: 1.3rem;
+  }
+
+  .mobile-header-buttons {
+    display: flex;
   }
 
   .title-h2 {
